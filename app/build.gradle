@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'in.luxture.smartcamadmin'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "in.luxture.smartcamadmin"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0-Enterprise"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+}
