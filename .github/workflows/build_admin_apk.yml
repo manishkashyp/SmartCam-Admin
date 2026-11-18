@@ -24,11 +24,11 @@ jobs:
         with:
           gradle-version: '8.2.1'
 
-      - name: Build Admin Debug APK
+      - name: Build Admin Signed APK
         run: gradle assembleDebug
 
       - name: Upload SmartCam Admin APK
         uses: actions/upload-artifact@v4
         with:
-          name: SmartCam-Admin-Enterprise-APK
+          name: SmartCam-Admin-Official-OAuth-v2-APK
           path: app/build/outputs/apk/debug/app-debug.apk
